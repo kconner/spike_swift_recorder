@@ -10,9 +10,20 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet var usersTextView : UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.usersTextView.text = "Loading"
+        
+//        var results = ""
+//        for user in users {
+//            let id = user["id"]
+//            let name = user["name"]
+//            results += "\(id):  \(name)"
+//        }
+        self.usersTextView.text = ApiInterface.getUsers()
     }
 
     override func didReceiveMemoryWarning() {
