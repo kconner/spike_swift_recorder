@@ -12,15 +12,15 @@ let apiRoot = "https://exomemex-api.herokuapp.com/api/v1/"
 
 class ApiInterface {
     
-    class func getUsers() -> String {
+    class func getUsers() -> [[String: AnyObject]] {
         if let
-            url = NSURL(fileURLWithPath: apiRoot + "users/"),
+            url = NSURL(string: apiRoot + "people"),
             data = NSData(contentsOfURL: url),
             list = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [[String: AnyObject]]
         {
-            return "Made it!!!"
+            return list
         } else {
-            return "No list found!"
+            return []
         }
     }
 

@@ -17,13 +17,13 @@ class FirstViewController: UIViewController {
         
         self.usersTextView.text = "Loading"
         
-//        var results = ""
-//        for user in users {
-//            let id = user["id"]
-//            let name = user["name"]
-//            results += "\(id):  \(name)"
-//        }
-        self.usersTextView.text = ApiInterface.getUsers()
+        var results = ""
+        for person in ApiInterface.getUsers() {
+            let id = person["id"]
+            let name = person["name"]
+            results += "\(id!):  \(name!)\n"
+        }
+        self.usersTextView.text = results
     }
 
     override func didReceiveMemoryWarning() {
