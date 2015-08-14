@@ -14,6 +14,9 @@
 		B0B5BF8F1B7BA7770011CA1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B5BF8E1B7BA7770011CA1E /* Images.xcassets */; };
 		B0B5BF921B7BA7770011CA1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B5BF901B7BA7770011CA1E /* LaunchScreen.xib */; };
 		B0B5BF9E1B7BA7770011CA1E /* TestomemexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BF9D1B7BA7770011CA1E /* TestomemexTests.swift */; };
+		B0B5BFDA1B7E3C790011CA1E /* ClipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFD91B7E3C790011CA1E /* ClipModel.swift */; };
+		B0B5BFDC1B7E3DD80011CA1E /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFDB1B7E3DD80011CA1E /* UsersModel.swift */; };
+		B0B5BFDE1B7E406F0011CA1E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFDD1B7E406F0011CA1E /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		B0B5BF971B7BA7770011CA1E /* TestomemexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestomemexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B5BF9C1B7BA7770011CA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B5BF9D1B7BA7770011CA1E /* TestomemexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestomemexTests.swift; sourceTree = "<group>"; };
+		B0B5BFD91B7E3C790011CA1E /* ClipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipModel.swift; sourceTree = "<group>"; };
+		B0B5BFDB1B7E3DD80011CA1E /* UsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		B0B5BFDD1B7E406F0011CA1E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		B0B5BF821B7BA7770011CA1E /* Testomemex */ = {
 			isa = PBXGroup;
 			children = (
+				B0B5BFDD1B7E406F0011CA1E /* SwiftyJSON.swift */,
 				B0B5BF851B7BA7770011CA1E /* AppDelegate.swift */,
 				B0B5BF871B7BA7770011CA1E /* FirstViewController.swift */,
 				B0B5BF891B7BA7770011CA1E /* SecondViewController.swift */,
@@ -86,6 +93,8 @@
 				B0B5BF8E1B7BA7770011CA1E /* Images.xcassets */,
 				B0B5BF901B7BA7770011CA1E /* LaunchScreen.xib */,
 				B0B5BF831B7BA7770011CA1E /* Supporting Files */,
+				B0B5BFD91B7E3C790011CA1E /* ClipModel.swift */,
+				B0B5BFDB1B7E3DD80011CA1E /* UsersModel.swift */,
 			);
 			path = Testomemex;
 			sourceTree = "<group>";
@@ -218,6 +227,9 @@
 				B0B5BF8A1B7BA7770011CA1E /* SecondViewController.swift in Sources */,
 				B0B5BF861B7BA7770011CA1E /* AppDelegate.swift in Sources */,
 				B0B5BF881B7BA7770011CA1E /* FirstViewController.swift in Sources */,
+				B0B5BFDE1B7E406F0011CA1E /* SwiftyJSON.swift in Sources */,
+				B0B5BFDC1B7E3DD80011CA1E /* UsersModel.swift in Sources */,
+				B0B5BFDA1B7E3C790011CA1E /* ClipModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +427,7 @@
 				B0B5BFA31B7BA7770011CA1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0B5BFA41B7BA7770011CA1E /* Build configuration list for PBXNativeTarget "TestomemexTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +436,7 @@
 				B0B5BFA61B7BA7770011CA1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
