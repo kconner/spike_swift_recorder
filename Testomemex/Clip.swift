@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ClipModel {
+class Clip {
     
     var name: String
     var transcription: String

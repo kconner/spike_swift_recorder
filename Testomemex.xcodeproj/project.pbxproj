@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03B350D1B862FC700A5A16B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B350C1B862FC700A5A16B /* Person.swift */; };
 		B0B5BF861B7BA7770011CA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BF851B7BA7770011CA1E /* AppDelegate.swift */; };
 		B0B5BF881B7BA7770011CA1E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BF871B7BA7770011CA1E /* FirstViewController.swift */; };
 		B0B5BF8A1B7BA7770011CA1E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BF891B7BA7770011CA1E /* SecondViewController.swift */; };
@@ -14,7 +15,7 @@
 		B0B5BF8F1B7BA7770011CA1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B5BF8E1B7BA7770011CA1E /* Images.xcassets */; };
 		B0B5BF921B7BA7770011CA1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B5BF901B7BA7770011CA1E /* LaunchScreen.xib */; };
 		B0B5BF9E1B7BA7770011CA1E /* TestomemexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BF9D1B7BA7770011CA1E /* TestomemexTests.swift */; };
-		B0B5BFDA1B7E3C790011CA1E /* ClipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFD91B7E3C790011CA1E /* ClipModel.swift */; };
+		B0B5BFDA1B7E3C790011CA1E /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFD91B7E3C790011CA1E /* Clip.swift */; };
 		B0B5BFDC1B7E3DD80011CA1E /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFDB1B7E3DD80011CA1E /* UsersModel.swift */; };
 		B0B5BFE21B7E42290011CA1E /* ApiInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5BFE11B7E42290011CA1E /* ApiInterface.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B03B350C1B862FC700A5A16B /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B0B5BF801B7BA7770011CA1E /* Testomemex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testomemex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B5BF841B7BA7770011CA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B5BF851B7BA7770011CA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +43,7 @@
 		B0B5BF971B7BA7770011CA1E /* TestomemexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestomemexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B5BF9C1B7BA7770011CA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B5BF9D1B7BA7770011CA1E /* TestomemexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestomemexTests.swift; sourceTree = "<group>"; };
-		B0B5BFD91B7E3C790011CA1E /* ClipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipModel.swift; sourceTree = "<group>"; };
+		B0B5BFD91B7E3C790011CA1E /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		B0B5BFDB1B7E3DD80011CA1E /* UsersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		B0B5BFE11B7E42290011CA1E /* ApiInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,9 +94,10 @@
 				B0B5BF8E1B7BA7770011CA1E /* Images.xcassets */,
 				B0B5BF901B7BA7770011CA1E /* LaunchScreen.xib */,
 				B0B5BF831B7BA7770011CA1E /* Supporting Files */,
-				B0B5BFD91B7E3C790011CA1E /* ClipModel.swift */,
+				B0B5BFD91B7E3C790011CA1E /* Clip.swift */,
 				B0B5BFDB1B7E3DD80011CA1E /* UsersModel.swift */,
 				B0B5BFE11B7E42290011CA1E /* ApiInterface.swift */,
+				B03B350C1B862FC700A5A16B /* Person.swift */,
 			);
 			path = Testomemex;
 			sourceTree = "<group>";
@@ -228,8 +231,9 @@
 				B0B5BF861B7BA7770011CA1E /* AppDelegate.swift in Sources */,
 				B0B5BF881B7BA7770011CA1E /* FirstViewController.swift in Sources */,
 				B0B5BFE21B7E42290011CA1E /* ApiInterface.swift in Sources */,
+				B03B350D1B862FC700A5A16B /* Person.swift in Sources */,
 				B0B5BFDC1B7E3DD80011CA1E /* UsersModel.swift in Sources */,
-				B0B5BFDA1B7E3C790011CA1E /* ClipModel.swift in Sources */,
+				B0B5BFDA1B7E3C790011CA1E /* Clip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
