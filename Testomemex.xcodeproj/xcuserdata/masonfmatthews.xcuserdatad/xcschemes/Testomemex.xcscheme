@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B0B5BF7F1B7BA7770011CA1E"
+               BlueprintIdentifier = "B0CEFE9B1B8CC34E009FD430"
                BuildableName = "Testomemex.app"
                BlueprintName = "Testomemex"
                ReferencedContainer = "container:Testomemex.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B0B5BF961B7BA7770011CA1E"
+               BlueprintIdentifier = "B0CEFEB21B8CC34E009FD430"
                BuildableName = "TestomemexTests.xctest"
                BlueprintName = "TestomemexTests"
                ReferencedContainer = "container:Testomemex.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B0B5BF961B7BA7770011CA1E"
+               BlueprintIdentifier = "B0CEFEB21B8CC34E009FD430"
                BuildableName = "TestomemexTests.xctest"
                BlueprintName = "TestomemexTests"
                ReferencedContainer = "container:Testomemex.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B0B5BF7F1B7BA7770011CA1E"
+            BlueprintIdentifier = "B0CEFE9B1B8CC34E009FD430"
             BuildableName = "Testomemex.app"
             BlueprintName = "Testomemex"
             ReferencedContainer = "container:Testomemex.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B0B5BF7F1B7BA7770011CA1E"
+            BlueprintIdentifier = "B0CEFE9B1B8CC34E009FD430"
             BuildableName = "Testomemex.app"
             BlueprintName = "Testomemex"
             ReferencedContainer = "container:Testomemex.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B0B5BF7F1B7BA7770011CA1E"
+            BlueprintIdentifier = "B0CEFE9B1B8CC34E009FD430"
             BuildableName = "Testomemex.app"
             BlueprintName = "Testomemex"
             ReferencedContainer = "container:Testomemex.xcodeproj">
