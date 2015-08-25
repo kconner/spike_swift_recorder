@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail: Person = self.detailItem {
             if let label = self.detailDescriptionLabel {
-                label.text = detail.name
+                label.text = "\(detail.id): \(detail.name)"
             }
         }
     }
