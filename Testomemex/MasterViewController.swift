@@ -11,7 +11,7 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = ApiInterface.getUsers()
+    var objects:[Person] = []
 
 
     override func awakeFromNib() {
@@ -32,6 +32,10 @@ class MasterViewController: UITableViewController {
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+        }
+        runOnBackgroundThread {
+            self.objects = ApiInterface.getUsers()
+            self.runOnUIThread(self.tableView.reloadData)
         }
     }
 
