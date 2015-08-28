@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
+    var user:Person! = Person(id: 1, name:"Mason") //TODO: Get rid of this default and have a login page!
+    var token:String!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
         splitViewController.delegate = self
         return true
+    }
+    
+    func getTokenFor(email:String, password:String) {
+        // TODO: hit API with email and password
+        // Store token returned by api
+        // Store person returned by api
+        // Return something that says whether the login was successful
     }
 
     func applicationWillResignActive(application: UIApplication) {

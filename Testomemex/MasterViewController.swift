@@ -12,7 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects:[Person] = []
-
+    var app:AppDelegate!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +23,7 @@ class MasterViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
+        app = UIApplication.sharedApplication().delegate as? AppDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
@@ -79,7 +80,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         let object = objects[indexPath.row]
-        cell.textLabel!.text = object.name
+        cell.textLabel!.text = object.name + (object.id == app.user.id ? " (Me!)" : "")
         return cell
     }
 
