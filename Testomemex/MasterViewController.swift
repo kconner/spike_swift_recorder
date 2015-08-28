@@ -11,7 +11,7 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects:[Person] = []
+    var people:[Person] = []
     var app:AppDelegate!
 
     override func awakeFromNib() {
@@ -35,7 +35,7 @@ class MasterViewController: UITableViewController {
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
         Thread.runOnBackgroundThread {
-            self.objects = ApiInterface.getPeople()
+            self.people = ApiInterface.getPeople()
             Thread.runOnUIThread(self.tableView.reloadData)
         }
     }
@@ -46,9 +46,18 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-        objects.insert(Person(id: 0, name: "Random Person"), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        let alert = UIAlertView(title: "Add Speaker",
+            message: "Please enter a name",
+            delegate: AddAlertDelegate(self, tableView),
+            cancelButtonTitle: "Cancel",
+            otherButtonTitles: "Add")
+        alert.alertViewStyle = .PlainTextInput
+        alert.textFieldAtIndex(0)?.placeholder = "Username"
+        alert.show()
+//        objects.insert(Person(id: 0, name: "Random Person"), atIndex: 0)
+//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+//        objects.sort({$0.name < $1.name})
     }
     
 
@@ -57,9 +66,9 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row]
+                let person = people[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
+                controller.detailItem = person
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -73,14 +82,14 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return people.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
-        let object = objects[indexPath.row]
-        cell.textLabel!.text = object.name + (object.id == app.user.id ? " (Me!)" : "")
+        let person = people[indexPath.row]
+        cell.textLabel!.text = person.name + (person.id == app.user.id ? " (Me!)" : "")
         return cell
     }
 
@@ -91,7 +100,7 @@ class MasterViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
+            people.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
