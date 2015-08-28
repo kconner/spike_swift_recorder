@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0C186731B90B836008E879F /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C186721B90B836008E879F /* Thread.swift */; };
 		B0CEFEA21B8CC34E009FD430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEA11B8CC34E009FD430 /* AppDelegate.swift */; };
 		B0CEFEA41B8CC34E009FD430 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEA31B8CC34E009FD430 /* MasterViewController.swift */; };
 		B0CEFEA61B8CC34E009FD430 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEA51B8CC34E009FD430 /* DetailViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0C186721B90B836008E879F /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		B0CEFE9C1B8CC34E009FD430 /* Testomemex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testomemex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CEFEA01B8CC34E009FD430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0CEFEA11B8CC34E009FD430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B0CEFE9F1B8CC34E009FD430 /* Supporting Files */,
 				B0CEFEC31B8CC393009FD430 /* Person.swift */,
 				B0CEFEC51B8CC53B009FD430 /* ApiInterface.swift */,
+				B0C186721B90B836008E879F /* Thread.swift */,
 			);
 			path = Testomemex;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0CEFEA61B8CC34E009FD430 /* DetailViewController.swift in Sources */,
+				B0C186731B90B836008E879F /* Thread.swift in Sources */,
 				B0CEFEA41B8CC34E009FD430 /* MasterViewController.swift in Sources */,
 				B0CEFEC41B8CC393009FD430 /* Person.swift in Sources */,
 				B0CEFEA21B8CC34E009FD430 /* AppDelegate.swift in Sources */,
@@ -423,6 +427,7 @@
 				B0CEFEBF1B8CC34E009FD430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0CEFEC01B8CC34E009FD430 /* Build configuration list for PBXNativeTarget "TestomemexTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +436,7 @@
 				B0CEFEC21B8CC34E009FD430 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

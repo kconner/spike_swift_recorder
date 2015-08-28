@@ -33,9 +33,9 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
-        runOnBackgroundThread {
+        Thread.runOnBackgroundThread {
             self.objects = ApiInterface.getPeople()
-            self.runOnUIThread(self.tableView.reloadData)
+            Thread.runOnUIThread(self.tableView.reloadData)
         }
     }
 
@@ -48,21 +48,6 @@ class MasterViewController: UITableViewController {
         objects.insert(Person(id: 0, name: "Random Person"), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-    
-    
-    // MARK: - Thread Helpers
-    
-    func runOnUIThread(fn:()->()) {
-        if NSThread.isMainThread() {
-            fn()
-        } else {
-            dispatch_async(dispatch_get_main_queue(), fn)
-        }
-    }
-    
-    func runOnBackgroundThread(fn:()->()) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), fn)
     }
     
 
