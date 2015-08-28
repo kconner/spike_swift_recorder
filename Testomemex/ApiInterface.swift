@@ -28,12 +28,12 @@ class ApiInterface {
         }
     }
     
-    class func postPerson() -> () {
+    class func postPerson(params: Dictionary<String,String>) -> () {
         var request = NSMutableURLRequest(URL: NSURL(string: apiRoot + "people")!)
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         
-        var params = ["person[name]":"Bobby", "person[year_of_birth]":"1992"] as Dictionary<String, String>
+        var params = ["person":params]
         
         var err: NSError?
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

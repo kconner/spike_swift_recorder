@@ -12,7 +12,6 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
     var detailItem: Person? {
         didSet {
             // Update the view.
@@ -33,6 +32,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        ApiInterface.postPerson(["name": "BB", "year_of_birth": "1930"])
     }
 
     override func didReceiveMemoryWarning() {
