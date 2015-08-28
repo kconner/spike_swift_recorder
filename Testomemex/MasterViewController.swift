@@ -45,6 +45,22 @@ class MasterViewController: UITableViewController {
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
+    
+    
+    // MARK: - Thread Helpers
+    
+    func runOnUIThread(fn:()->()) {
+        if NSThread.isMainThread() {
+            fn()
+        } else {
+            dispatch_async(dispatch_get_main_queue(), fn)
+        }
+    }
+    
+    func runOnBackgroundThread(fn:()->()) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), fn)
+    }
+    
 
     // MARK: - Segues
 
