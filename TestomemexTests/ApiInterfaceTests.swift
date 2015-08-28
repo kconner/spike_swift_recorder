@@ -10,7 +10,6 @@ import XCTest
 class ApiInterfaceTests: XCTestCase {
     func testGetPeople() {
         // TODO: How do you mock in Swift tests?
-        // The 'as Any' works, but is hacky.
-        XCTAssertTrue((ApiInterface.getPeople().first! as Any) is Person)
+        XCTAssertTrue(ApiInterface.getPeople().count > 0)
     }
 }
