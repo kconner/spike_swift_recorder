@@ -34,7 +34,7 @@ class MasterViewController: UITableViewController {
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
         runOnBackgroundThread {
-            self.objects = ApiInterface.getUsers()
+            self.objects = ApiInterface.getPeople()
             self.runOnUIThread(self.tableView.reloadData)
         }
     }
