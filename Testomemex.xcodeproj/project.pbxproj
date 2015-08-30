@@ -14,6 +14,7 @@
 		B0C186781B90B9B4008E879F /* ApiInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C186771B90B9B4008E879F /* ApiInterfaceTests.swift */; };
 		B0C186791B90B9CB008E879F /* ApiInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEC51B8CC53B009FD430 /* ApiInterface.swift */; };
 		B0C1867A1B90BA54008E879F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEC31B8CC393009FD430 /* Person.swift */; };
+		B0C1867C1B93878B008E879F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C1867B1B93878B008E879F /* Session.swift */; };
 		B0CEFEA21B8CC34E009FD430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEA11B8CC34E009FD430 /* AppDelegate.swift */; };
 		B0CEFEA41B8CC34E009FD430 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEA31B8CC34E009FD430 /* MasterViewController.swift */; };
 		B0CEFEA61B8CC34E009FD430 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CEFEA51B8CC34E009FD430 /* DetailViewController.swift */; };
@@ -40,6 +41,7 @@
 		B0C186721B90B836008E879F /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		B0C186741B90B91D008E879F /* ThreadsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTests.swift; sourceTree = "<group>"; };
 		B0C186771B90B9B4008E879F /* ApiInterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiInterfaceTests.swift; sourceTree = "<group>"; };
+		B0C1867B1B93878B008E879F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B0CEFE9C1B8CC34E009FD430 /* Testomemex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testomemex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CEFEA01B8CC34E009FD430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0CEFEA11B8CC34E009FD430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				B0CEFEC51B8CC53B009FD430 /* ApiInterface.swift */,
 				B0C186721B90B836008E879F /* Thread.swift */,
 				B02D6B811B90F49500E90147 /* AddAlertDelegate.swift */,
+				B0C1867B1B93878B008E879F /* Session.swift */,
 			);
 			path = Testomemex;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				B0C186731B90B836008E879F /* Thread.swift in Sources */,
 				B0CEFEA41B8CC34E009FD430 /* MasterViewController.swift in Sources */,
 				B0CEFEC41B8CC393009FD430 /* Person.swift in Sources */,
+				B0C1867C1B93878B008E879F /* Session.swift in Sources */,
 				B0CEFEA21B8CC34E009FD430 /* AppDelegate.swift in Sources */,
 				B02D6B821B90F49500E90147 /* AddAlertDelegate.swift in Sources */,
 				B0CEFEC61B8CC53B009FD430 /* ApiInterface.swift in Sources */,
