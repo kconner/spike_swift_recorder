@@ -55,9 +55,11 @@ class ApiInterface {
                     var id = parseJSON["id"] as? Int
                     println("Success!  New id: \(id)")
                     var newPerson = Person(id: id!, name: person_params["name"]!)
-                    controller.people.append(newPerson)
-                    controller.people.sort({ p1, p2 in p1.name < p2.name })
-                    controller.tableView.reloadData()
+                    Thread.runOnUIThread {
+                        controller.people.append(newPerson)
+                        controller.people.sort({ p1, p2 in p1.name < p2.name })
+                        controller.tableView.reloadData()
+                    }
                 }
                 else {
                     let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
