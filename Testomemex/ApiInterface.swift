@@ -28,12 +28,12 @@ class ApiInterface {
         }
     }
     
-    class func postPerson(person_params: Dictionary<String,String>, controller: MasterViewController) {
+    class func postPerson(personParams: Dictionary<String,String>, completionHandler: (Int, String) -> ()) {
         var request = NSMutableURLRequest(URL: NSURL(string: apiRoot + "people")!)
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         
-        var params = ["person":person_params]
+        var params = ["person":personParams]
         
         var err: NSError?
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
@@ -54,12 +54,7 @@ class ApiInterface {
                 if let parseJSON = json {
                     var id = parseJSON["id"] as? Int
                     println("Success!  New id: \(id)")
-                    var newPerson = Person(id: id!, name: person_params["name"]!)
-                    Thread.runOnUIThread {
-                        controller.people.append(newPerson)
-                        controller.people.sort({ p1, p2 in p1.name < p2.name })
-                        controller.tableView.reloadData()
-                    }
+                    completionHandler(id!, personParams["name"]!)
                 }
                 else {
                     let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)

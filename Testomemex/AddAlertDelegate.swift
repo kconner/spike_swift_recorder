@@ -10,12 +10,10 @@ import UIKit
 
 class AddAlertDelegate: NSObject, UIAlertViewDelegate {
     var capture:AddAlertDelegate?
-    var tableView:UITableView
-    var controller:MasterViewController
+    var completionHandler:((Int, String) -> ())
     
-    init(_ controller:MasterViewController, _ tableView:UITableView) {
-        self.controller = controller
-        self.tableView = tableView
+    init(callback:((Int, String) -> ())) {
+        self.completionHandler = callback
         super.init()
         capture = self //prevent immediate deallocation
     }
@@ -24,7 +22,7 @@ class AddAlertDelegate: NSObject, UIAlertViewDelegate {
         if buttonIndex == 1 {
             if let name = alertView.textFieldAtIndex(0)?.text {
                 Thread.runOnUIThread {
-                    ApiInterface.postPerson(["name": name], controller: self.controller)
+                    ApiInterface.postPerson(["name": name], completionHandler: self.completionHandler)
                 }
             }
         }

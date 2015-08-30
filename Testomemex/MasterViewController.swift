@@ -48,16 +48,21 @@ class MasterViewController: UITableViewController {
     func insertNewObject(sender: AnyObject) {
         let alert = UIAlertView(title: "Add Speaker",
             message: "Please enter a name",
-            delegate: AddAlertDelegate(self, tableView),
+            delegate: AddAlertDelegate( callback: {
+                (id: Int, name: String) -> () in
+                    var newPerson = Person(id: id, name: name)
+                    Thread.runOnUIThread {
+                        self.people.append(newPerson)
+                        self.people.sort({ p1, p2 in p1.name < p2.name })
+                        self.tableView.reloadData()
+                    }
+                }
+            ),
             cancelButtonTitle: "Cancel",
             otherButtonTitles: "Add")
         alert.alertViewStyle = .PlainTextInput
         alert.textFieldAtIndex(0)?.placeholder = "Username"
         alert.show()
-//        objects.insert(Person(id: 0, name: "Random Person"), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//        objects.sort({$0.name < $1.name})
     }
     
 
