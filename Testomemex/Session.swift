@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Session {
-    var user:Person
+struct Session {
+    let user:Person
     var token:String?
     
     init(user:Person) {
         self.user = user
     }
-    
+
     func getToken() {
         // TODO: hit API with email and password
         // Store token returned by api

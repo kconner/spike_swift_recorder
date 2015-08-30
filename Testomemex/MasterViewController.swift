@@ -12,7 +12,9 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var people:[Person] = []
-    var session:Session!
+
+    // A local copy of the session. SessionController is the authority.
+    var session = SessionController.sharedController.session
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +25,6 @@ class MasterViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        self.session = app.session
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()

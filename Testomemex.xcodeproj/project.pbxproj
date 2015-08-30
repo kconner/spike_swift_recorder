@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2DA1D41B93B956007FA4E1 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2DA1D31B93B956007FA4E1 /* SessionController.swift */; };
 		B02D6B821B90F49500E90147 /* AddAlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02D6B811B90F49500E90147 /* AddAlertDelegate.swift */; };
 		B0C186731B90B836008E879F /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C186721B90B836008E879F /* Thread.swift */; };
 		B0C186751B90B91D008E879F /* ThreadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C186741B90B91D008E879F /* ThreadsTests.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2DA1D31B93B956007FA4E1 /* SessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		B02D6B811B90F49500E90147 /* AddAlertDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlertDelegate.swift; sourceTree = "<group>"; };
 		B0C186721B90B836008E879F /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		B0C186741B90B91D008E879F /* ThreadsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTests.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				B0C186721B90B836008E879F /* Thread.swift */,
 				B02D6B811B90F49500E90147 /* AddAlertDelegate.swift */,
 				B0C1867B1B93878B008E879F /* Session.swift */,
+				0A2DA1D31B93B956007FA4E1 /* SessionController.swift */,
 			);
 			path = Testomemex;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0CEFEA61B8CC34E009FD430 /* DetailViewController.swift in Sources */,
+				0A2DA1D41B93B956007FA4E1 /* SessionController.swift in Sources */,
 				B0C186731B90B836008E879F /* Thread.swift in Sources */,
 				B0CEFEA41B8CC34E009FD430 /* MasterViewController.swift in Sources */,
 				B0CEFEC41B8CC393009FD430 /* Person.swift in Sources */,
